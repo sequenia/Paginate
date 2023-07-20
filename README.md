@@ -1,10 +1,8 @@
 Paginate
 ============
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Paginate-green.svg?style=true)](https://android-arsenal.com/details/1/2797)
-
 Android library for creating simple pagination functionality (aka infinite scrolling) upon `RecyclerView` or
-`AbsListView`.
+`AbsListView`. Based on [@MarkoMilos](https://github.com/MarkoMilos) repository [Paginate](https://github.com/MarkoMilos/Paginate)
 
 Features
 --------
@@ -27,15 +25,7 @@ Setup
 
 Gradle:
 ```groovy
-compile 'com.github.markomilos:paginate:1.0.0'
-```
-or Maven:
-```xml
-<dependency>
-  <groupId>com.github.markomilos</groupId>
-  <artifactId>paginate</artifactId>
-  <version>1.0.0</version>
-</dependency>
+implementation 'com.github.sequenia:Paginate:1.0.1'
 ```
 
 Usage
@@ -142,21 +132,6 @@ adapter will be set on the list and scroll listeners and data observers will be 
 data to adapter check will be performed and if there is no more data to load loading row will be removed. That means
 that loading row will be added/removed automatically. Use this method to explicitly (manually) notify that there is no
 more item to load.
-
-
-Developed By
---------
-Marko Milos (marko.milos.hr@gmail.com)
-
-<a href="https://twitter.com/mysterymarks">
-  <img alt="Follow me on Twitter"
-       src="https://raw.githubusercontent.com/MarkoMilos/Paginate/master/art/twitter.png" />
-</a>
-<a href="https://hr.linkedin.com/in/markomilos">
-  <img alt="Follow me on LinkedIn"
-       src="https://raw.githubusercontent.com/MarkoMilos/Paginate/master/art/linkedin.png" />
-</a>
-
 
 License
 --------

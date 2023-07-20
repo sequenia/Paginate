@@ -5,6 +5,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 class WrapperAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private static final int ITEM_VIEW_TYPE_LOADING = Integer.MAX_VALUE - 50; // Magic
@@ -36,6 +38,20 @@ class WrapperAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         } else {
             wrappedAdapter.onBindViewHolder(holder, position);
         }
+    }
+
+    @Override
+    public void onBindViewHolder(
+        @NonNull RecyclerView.ViewHolder holder,
+        int position,
+        @NonNull List<Object> payloads
+    ) {
+        if (payloads.isEmpty()) {
+            super.onBindViewHolder(holder, position, payloads);
+            return;
+        }
+
+        wrappedAdapter.onBindViewHolder(holder, position, payloads);
     }
 
     @Override
